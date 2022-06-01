@@ -13,7 +13,7 @@ import ThemeContext from "./ThemeContext";
 //you cannot use hooks with class components
 //anything that starts with use cannot be used in a class component
 
-const Modal = lazy(() => import("./Modal"));
+const Modal = lazy(() => import("./Modal")); //NB: We dont need another Suspense because it will bubble all the way to the top
 
 class Details extends Component {
   //with babel we do not need constructor. We can just access state directly
