@@ -67,7 +67,7 @@ class Details extends Component {
     // throw new Error("App crashed");
 
     return (
-      <div className="px-6 sm:px-10 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className=" mt-10 px-6 sm:px-10 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         <Carousel images={images} />
         <div>
           <h1>{name}</h1>
