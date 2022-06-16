@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import { Component } from "react";
+import { Component, lazy } from "react";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
 import ThemeContext from "./ThemeContext";
-import Modal from "./Modal";
+// import Modal from "./Modal";
 
 // const Details = () => {
 //   const { id } = useParams();
@@ -12,6 +12,8 @@ import Modal from "./Modal";
 
 //you cannot use hooks with class components
 //anything that starts with use cannot be used in a class component
+
+const Modal = lazy(() => import("./Modal")); //NB: We dont need another Suspense because it will bubble all the way to the top
 
 class Details extends Component {
   //with babel we do not need constructor. We can just access state directly
