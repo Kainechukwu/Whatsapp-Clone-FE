@@ -1,3 +1,9 @@
+@import "./fontStyles.scss";
+
+body {
+  min-height: 100vh;
+}
+
 .bg-dark-1 {
   background-color: #121212;
 }
@@ -28,4 +34,20 @@
 
 .green1 {
   background-color: rgb(37, 44, 37);
+}
+
+.dark1 {
+  background-color: #3f4e4f !important;
+}
+
+.dark2 {
+  background-color: #2c3639 !important;
+}
+
+.borderGray {
+  border-color: rgb(56, 68, 77);
+}
+
+.transformRotate {
+  transform: rotateY(180deg);
 }

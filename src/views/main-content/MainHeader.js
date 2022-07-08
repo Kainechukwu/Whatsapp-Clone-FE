@@ -1,8 +1,8 @@
-import StatusIcon from "../svg//StatusIcon.js";
-import Plus from "../svg//Plus.js";
-import MenuIcon from "../svg//MenuIcon.js";
+// import StatusIcon from "../svg//StatusIcon.js";
+import SearchIcon from "../svg//SearchIcon.js";
+import MenuIcon from "../svg/MenuIcon.js";
 
-const SidebarHeader = () => {
+const MainHeader = () => {
   return (
     <div className="dark1 py-3 border-r borderGray shadow-lg">
       <div className="  w-full h-full flex justify-between items-center px-4">
@@ -11,9 +11,12 @@ const SidebarHeader = () => {
           src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
           alt=""
         />
-        <div className="className grid grid-cols-3 gap-6 pr-3">
-          <StatusIcon />
-          <Plus />
+        <div className="className grid grid-cols-5 gap-6 pr-3 ">
+          {/* <StatusIcon /> */}
+          <div></div>
+          <div></div>
+          <div></div>
+          <SearchIcon />
           <MenuIcon />
         </div>
       </div>
@@ -21,4 +24,4 @@ const SidebarHeader = () => {
   );
 };
 
-export default SidebarHeader;
+export default MainHeader;

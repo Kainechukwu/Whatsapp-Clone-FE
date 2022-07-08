@@ -1,22 +1,16 @@
 // import React from "react";
 import { StrictMode, useState, lazy, Suspense } from "react";
 import ThemeContext from "./ThemeContext";
-// import Details from "./Details";
+import Home from "./views/main-content/chat/Home";
 import Main from "./views/Main";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  // Link
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { render } from "react-dom";
-// import SearchParams from "./SearchParams";
 
-const Details = lazy(() => import("./Details"));
-const SearchParams = lazy(() => import("./SearchParams"));
+const CurrentChat = lazy(() => import("./views/main-content/chat/CurrentChat"));
 
 const App = () => {
   const theme = useState("brown");
+
   return (
     <StrictMode>
       <Suspense
@@ -28,20 +22,15 @@ const App = () => {
       >
         <ThemeContext.Provider value={theme}>
           <BrowserRouter>
-            {/* <header>
-              <Link to="/">Adopt Me!</Link>
-            </header> */}
             <Routes>
-              <Route path="/details/:id" element={<Details />} />
-              <Route path="/search" element={<SearchParams />} />
-              <Route path="/" element={<Main />} />
+              <Route path="/" element={<Main />}>
+                <Route exact path="/chat/:chatId" element={<CurrentChat />} />
+
+                <Route index element={<Home />} />
+              </Route>
             </Routes>
           </BrowserRouter>
         </ThemeContext.Provider>
-        {/* <div>
-        
-        
-      </div> */}
       </Suspense>
     </StrictMode>
   );
