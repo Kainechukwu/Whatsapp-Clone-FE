@@ -4,7 +4,7 @@ import MenuIcon from "../svg//MenuIcon.js";
 
 const SidebarHeader = () => {
   return (
-    <div className="dark1 py-3 border-r borderGray shadow-lg">
+    <div className="dark1 py-3  shadow-lg">
       <div className="  w-full h-full flex justify-between items-center px-4">
         <img
           className="inline-block h-12 w-12 rounded-full"

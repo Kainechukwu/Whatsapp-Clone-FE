@@ -46,7 +46,7 @@ class Sidebar extends Component {
   ];
   render() {
     return (
-      <div className="fixed dark2  h-full overflow-y-auto sidebar">
+      <div className="fixed dark2  h-full overflow-y-auto sidebar border-r borderGray">
         <div className="sticky top-0 flex flex-col ">
           <SidebarHeader />
           <div className="dark2 border-b borderGray flex items-center px-4 py-2">
